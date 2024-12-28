@@ -1,5 +1,7 @@
-function BookShow() {
-  return <div>BookShow</div>;
+import BookEdit from "./BookEdit";
+
+function BookShow({ book }) {
+  return <div className="book-show">{book.title}</div>;
 }
 
 export default BookShow;
