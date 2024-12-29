@@ -1,3 +1,16 @@
 {
-  "books": []
+  "books": [
+    {
+      "title": "The G",
+      "id": 1
+    },
+    {
+      "title": "Man O Man",
+      "id": 2
+    },
+    {
+      "title": "Hello",
+      "id": 3
+    }
+  ]
 }
