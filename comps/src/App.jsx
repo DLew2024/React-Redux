@@ -1,37 +1,27 @@
-import { GoBell, GoCloudDownload, GoDatabase } from "react-icons/go";
-import Button from "./Button";
+import Sidebar from "./components/Sidebar";
+import Route from "./components/Route";
+import AccordianPage from "./pages/AccordionPage";
+import DropdownPage from "./pages/DropdownPage";
+import ButtonPage from "./pages/ButtonPage";
+import ModalPage from "./pages/ModalPage";
 
 function App() {
-  const handleClick = () => {
-    console.log("click");
-  };
   return (
-    <div>
-      <div>
-        <Button success rounded outline className="mb-5" onClick={handleClick}>
-          <GoBell />
-          Click!
-        </Button>
-      </div>
-      <div>
-        <Button danger outline>
-          <GoCloudDownload />
-          Buy Now
-        </Button>
-      </div>
-      <div>
-        <Button warning>See Deal</Button>
-      </div>
-      <div>
-        <Button secondary outline>
-          <GoDatabase />
-          Hide Ads
-        </Button>
-      </div>
-      <div>
-        <Button primary rounded>
-          Something!
-        </Button>
+    <div className="container mx-auto grid grid-cols-6 gap-4 mt-4">
+      <Sidebar to={{}} className="mb-3" />
+      <div className="col-span-5">
+        <Route path="/">
+          <DropdownPage />
+        </Route>
+        <Route path="/accordion">
+          <AccordianPage />
+        </Route>
+        <Route path="/button">
+          <ButtonPage />
+        </Route>
+        <Route path="/modal">
+          <ModalPage />
+        </Route>
       </div>
     </div>
   );
